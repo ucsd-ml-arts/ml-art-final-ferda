@@ -1,12 +1,12 @@
 # Final Project
 
-Your Name, yourcontact@ucsd.edu
-
-(Your teammates' contact info, if appropriate)
+Raul Pegan, rpegan@ucsd.edu
 
 ## Abstract Proposal
 
 FIRST STEP: Write up a description (in the form of an abstract) of what you will revisit for your final project. This should be one paragraph clearly describing your concept and approach. What are your desired creative goals? How are you expanding on something we covered in the class? How will you present your work next Wednesday in the final project presentations? 
+
+For the final project I plan to iterate on the generative music assignment, where we created an interface for musicians to interact with magenta models. I desire to make a musical partner that is accessible for any musician, so as a result, I aim to make the interactivity more open, with diverse instruments, scales, and tempos. Consequently, I will have to tweak the magenta models in order to adapt to these changes. The concept I have found the most interesting and impactful during this class has been an AI functioning as a co-creator, and I wish to explore that idea further. I wish to present my final as a live perfomance of sorts, since the model does have some latency unfortunately.
 
 ## Project Report
 
