@@ -1,6 +1,10 @@
 # Final Project
 
+### SOFI
+
 Raul Pegan, rpegan@ucsd.edu
+
+![SOFI](UI.png)
 
 ## Abstract Proposal
 
