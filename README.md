@@ -17,13 +17,13 @@ Your code for generating your project:
 - app.py - Pyramid webabb
 - banjos.html - Main static page
 - public/ - directory containing all the JS and CSS files necessary for the project
-- requirements.txt - required models
+- requirements.txt - required pip libraries
 
 ## Results
 
-Habib.mov - My friend habib going back and forth with the product
-Juan.mov - My uncle Juan interacting with the product
-UI_closeup.mov - Me interacting with the product, I am not a musician so the generated audio is not good, but this serves as a closer look at the UI
+- Habib.mov - My friend habib going back and forth with the product
+- Juan.mov - My uncle Juan interacting with the product
+- UI_closeup.mov - Me interacting with the product, I am not a musician so the generated audio is not good, but this serves as a closer look at the UI
 
 https://drive.google.com/open?id=1xVCapmBD75m5soVq5m3X85zKQ5PnchDl
 
