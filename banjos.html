@@ -1,0 +1,125 @@
+<html>
+<head>
+  <link rel="stylesheet" href="banjos.css">
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+    <script src="https://unpkg.com/tone"></script>
+    <script src="https://unpkg.com/@tonejs/ui"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<!-- polyfill -->
+	<script src="inc/shim/Base64.js" type="text/javascript"></script>
+	<script src="inc/shim/Base64binary.js" type="text/javascript"></script>
+	<script src="inc/shim/WebAudioAPI.js" type="text/javascript"></script>
+	<!-- midi.js package -->
+	<script src="js/midi/audioDetect.js" type="text/javascript"></script>
+	<script src="js/midi/gm.js" type="text/javascript"></script>
+	<script src="js/midi/loader.js" type="text/javascript"></script>
+	<script src="js/midi/plugin.audiotag.js" type="text/javascript"></script>
+	<script src="js/midi/plugin.webaudio.js" type="text/javascript"></script>
+	<script src="js/midi/plugin.webmidi.js" type="text/javascript"></script>
+	<!-- utils -->
+	<script src="js/util/dom_request_xhr.js" type="text/javascript"></script>
+	<script src="js/util/dom_request_script.js" type="text/javascript"></script>
+
+    </head>
+<body>
+  <section id="wrap">
+    <header>
+      <h1>SoFi</h1>
+      </br>
+      <h2>A Machine Learning Generative Music Companion By Raul</h2>
+      <h5>Piano frontend credit to Luke Wulf and Carol Gabriel</h5>
+      <div><select id="progression">
+        <option>C G Am F C G Am F</option>
+        <option>G Am F C G Am F C</option>
+        <option>Am F C G Am F C G</option>
+        <option>F C G Am F C G Am</option>
+      </select></div>
+    </header>
+    <section id="main">
+      <div class="nowplaying"></div>
+      <div class="keys">
+        <div data-key="65" class="key" data-note="C" data-midi="60">
+            <span class="hints">A</span>
+        </div>
+        <div data-key="87" class="key sharp" data-note="C#" data-midi="61">
+            <span class="hints">W</span>
+        </div>
+        <div data-key="83" class="key" data-note="D" data-midi="62">
+            <span class="hints">S</span>
+        </div>
+        <div data-key="69" class="key sharp" data-note="D#" data-midi="63">
+            <span class="hints">E</span>
+        </div>
+        <div data-key="68" class="key" data-note="E" data-midi="64">
+            <span class="hints">D</span>
+        </div>
+        <div data-key="70" class="key" data-note="F" data-midi="65">
+            <span class="hints">F</span>
+        </div>
+        <div data-key="84" class="key sharp" data-note="F#" data-midi="66">
+            <span class="hints">T</span>
+        </div>
+        <div data-key="71" class="key" data-note="G" data-midi="67">
+            <span class="hints">G</span>
+        </div>
+        <div data-key="89" class="key sharp" data-note="G#" data-midi="68">
+            <span class="hints">Y</span>
+        </div>
+        <div data-key="72" class="key" data-note="A" data-midi="69">
+            <span class="hints">H</span>
+        </div>
+        <div data-key="85" class="key sharp" data-note="A#" data-midi="70">
+            <span class="hints">U</span>
+        </div>
+        <div data-key="74" class="key" data-note="B" data-midi="71">
+            <span class="hints">J</span>
+        </div>
+        <div data-key="75" class="key" data-note="C" data-midi="72">
+            <span class="hints">K</span>
+        </div>
+        <div data-key="79" class="key sharp" data-note="C#" data-midi="73">
+            <span class="hints">O</span>
+        </div>
+        <div data-key="76" class="key" data-note="D" data-midi="74">
+            <span class="hints">L</span>
+        </div>
+        <div data-key="80" class="key sharp" data-note="D#" data-midi="75">
+            <span class="hints">P</span>
+        </div>
+        <div data-key="186" class="key" data-note="E" data-midi="76">
+            <span class="hints">;</span>
+        </div>
+      </div>
+
+      <audio data-key="65" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+      <audio data-key="87" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+      <audio data-key="83" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+      <audio data-key="69" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+      <audio data-key="68" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+      <audio data-key="70" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+      <audio data-key="84" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+      <audio data-key="71" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+      <audio data-key="89" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+      <audio data-key="72" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+      <audio data-key="85" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+      <audio data-key="74" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+      <audio data-key="75" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+      <audio data-key="79" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+      <audio data-key="76" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+      <audio data-key="80" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+      <audio data-key="186" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+      </section>
+  </section>
+
+  <button id="submit">Send to ImprovRNN</button>
+  <h5 class="waiting"></h5>
+  <button id="clear">Clear Input</button> 
+  <button id="stop">Stop Music</button> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
+  <script src="banjos.js"></script>
+  <!---<script src="midi_test.js"></script>--->
+
+  </body>
+  </html>
